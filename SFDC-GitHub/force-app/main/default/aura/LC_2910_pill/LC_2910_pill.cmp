@@ -1,0 +1,27 @@
+<aura:component >
+    <aura:attribute name="picklistOptsList" type="String[]"/>
+    <ui:inputSelect multiple="true" 
+                    class="multiple"
+                    aura:id="InputSelectMultiple" 
+                    change="{!c.onMultiSelectChange}" value="">
+
+        <ui:inputSelectOption text="Any"/>
+        <ui:inputSelectOption text="Open"/>
+        <ui:inputSelectOption text="Closed"/>
+        <ui:inputSelectOption text="Closed Won"/>
+        <ui:inputSelectOption text="Prospecting"/>
+        <ui:inputSelectOption text="Qualification"/>
+        <ui:inputSelectOption text="Needs Analysis"/>
+        <ui:inputSelectOption text="Closed Lost"/>
+    </ui:inputSelect>
+    <br></br>
+    <ui:inputText class="result" aura:id="multiResult" value="{!v.picklistOptsList}" />
+    <br></br>
+    <ul class="slds-listbox slds-listbox_inline slds-p-top_xxx-small" role="group" aria-label="Inputted Options:">
+        <aura:iteration items="{!v.picklistOptsList}" var="sr">
+            <li role="presentation" class="slds-listbox__item">
+                <lightning:pill class="slds-m-around_xx-small" label="{!sr}"/>
+            </li>
+        </aura:iteration>
+    </ul>
+</aura:component>

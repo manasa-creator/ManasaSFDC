@@ -1,0 +1,20 @@
+<template>
+    <div class="slds-m-top_medium slds-m-bottom_x-large">
+        <h2 class="slds-text-heading_medium slds-m-bottom_medium">
+            Button group using simple buttons and a disabled <em>buttonMenu</em>.
+        </h2>
+
+     
+        <lightning-button-group>
+            <lightning-button label="Contact" icon-name="standard:contact"  onclick={handleCancel}></lightning-button>
+            <lightning-button label="Lead" icon-name="standard:lead" onclick={handleCancel}></lightning-button>
+            <lightning-button label="Opportunities" icon-name="standard:opportunities" onclick={handleCancel}></lightning-button>
+			 <lightning-button label="Account" icon-name="standard:account" onclick={getAccounts}></lightning-button>
+			 
+            <lightning-button-menu alternative-text="Show menu" variant="border-filled" disabled>
+                <lightning-menu-item label="Employee__c" value="item1"></lightning-menu-item>
+                <lightning-menu-item label="Department_Name__c" value="item2"></lightning-menu-item>
+            </lightning-button-menu>
+        </lightning-button-group>
+    </div>
+</template>

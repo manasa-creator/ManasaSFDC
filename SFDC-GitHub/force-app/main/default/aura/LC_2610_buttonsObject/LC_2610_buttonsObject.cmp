@@ -1,0 +1,13 @@
+<aura:component >
+    
+    <lightning:buttonGroup>
+        <lightning:button label = "Contact" iconName="utility:add"/>
+        <lightning:button label="Lead" iconname="....."/>
+        <lightning:button label = "Opportunity" iconName="utility:add"/>
+        <lightning:button label = "Account" iconName="utility:add"/>
+    <lightning:buttonMenu alternativeText="Menu">
+        <lightning:menuItem label="Employee__c" value="emp"/>
+        <lightning:menuItem label="Depatment_Name__c" value="emp"/>
+    </lightning:buttonMenu>
+    </lightning:buttonGroup>
+</aura:component>

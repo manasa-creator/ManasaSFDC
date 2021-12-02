@@ -1,0 +1,13 @@
+<template>
+    <lightning-card>
+        <div class="slds-box">
+            <c-contact-accountsearchpillchildcomp lookup-label="Account" object-api-name="account" icon-name="standard:account"
+        onrecordselection={onAccountSelection}>
+           
+        </c-contact-accountsearchpillchildcomp>
+        </div>
+        
+        <lightning-pill name={accountName} label={accountName} onremove={clear}></lightning-pill>
+        
+    </lightning-card>
+</template>
